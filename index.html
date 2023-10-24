@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WebSocket Video Processing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #home {
+            background: url('https://media.istockphoto.com/id/1340661121/photo/teenage-girl-having-conversation-using-sign-language-on-laptop-at-home.jpg?s=2048x2048&w=is&k=20&c=3C8TQxtve4KCd4jhaqhg1A5Pd1o-khab8GE5hqnwUdY=') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.00rem;
+            /* font-weight: bold; */
+        }
+        .navbar-nav .nav-link.active .about-us{
+            color: #28a745;
+        }
+    </style> 
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mumu.ai</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#translator">Translator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+        <!-- Home Section -->
+        <section id="home" class="d-flex justify-content-center align-items-center">
+            <div class="text-center">
+                <h1 class="display-1 mb-4">Welcome to Mumu.ai</h1>
+                <p class="lead mb-4">Your one-stop solution for real-time sign language translation.</p>
+                <a href="#translator" class="btn btn-success btn-lg">START TRANSLATING</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-secondary text-white d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="text-center">
+                <h2 class="mb-3 about-us">About Us</h2>
+                <p class="lead mb-4">Mumu.ai is a platform dedicated to bridging communication gaps through innovative technology.</p>
+                <h3 class="mb-3">Mission</h3>
+                <p class="lead mb-4">Empower individuals and communities by breaking down language barriers.</p>
+                <h3 class="mb-3">Vision</h3>
+                <p class="lead mb-4">Become a global leader in real-time translation solutions, fostering inclusivity and understanding.</p>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="container my-5">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="mb-3">Sign Language Learning Resources</h2>
+                  <p class="lead">Explore our resources to learn sign language and enhance your communication skills. Whether you're a beginner or looking to improve your fluency, we've got you covered. Join our community, access tutorials, and find helpful materials to start your sign language journey.</p>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-md-4">
+                  <div class="card">
+                      <img src="https://www.startasl.com/wp-content/uploads/start-asl-logo-new.png" class="card-img-top" alt="Sign Language Tutorial">
+                      <div class="card-body">
+                          <h5 class="card-title">Sign Language Tutorial</h5>
+                          <p class="card-text">Learn the basics of sign language with our comprehensive tutorial. Get started on your journey to becoming proficient in sign language.</p>
+                          <a href="https://www.startasl.com/" class="btn btn-primary">Access Tutorial</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <img src="https://www.signingsavvy.com/images/layout/logo_main.png" class="card-img-top" alt="Sign Language Community">
+                      <div class="card-body">
+                          <h5 class="card-title">Sign Language Community</h5>
+                          <p class="card-text">Connect with fellow sign language enthusiasts and practitioners in our vibrant online community. Share your experiences and learn from others.</p>
+                          <a href="https://www.startasl.com/asl-learning-community/" class="btn btn-primary">Join Community</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <img src="https://www.handspeak.com/handspeak/static/images/logo.png" class="card-img-top" alt="Sign Language Materials">
+                      <div class="card-body">
+                          <h5 class="card-title">Sign Language Materials</h5>
+                          <p class="card-text">Access a variety of sign language materials, including books, videos, and downloadable resources to aid your learning journey.</p>
+                          <a href="https://www.handspeak.com/" class="btn btn-primary">Browse Materials</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+
+
+        <!-- Translator Section -->
+        <section id="translator" class="container my-5">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="mb-3">ASL to English Translator</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <video id="webcam" width="640" height="480" class="rounded mb-3" autoplay></video>
+                    <canvas id="canvas" width="640" height="480" class="d-none"></canvas>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-3">
+                    <button type="button" id="startButton" class="btn btn-success me-2">Start</button>
+                    <button type="button" id="stopButton" class="btn btn-danger">Stop</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h4>ENGLISH TRANSLATION: <span id="results" class="text-success"></span></h4>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="sparkle.js"></script>
+
+</body>
+</html>
